@@ -7,8 +7,7 @@
   "citeFormats": [
     {
       "name": "Format #1",
-      "format": "formatted-bibliography",
-      "cslStyle": "IEEE"
+      "format": "formatted-bibliography"
     }
   ],
   "exportFormats": [
