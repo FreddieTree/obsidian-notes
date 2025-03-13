@@ -5,7 +5,14 @@
   "pdfExportImageFormat": "jpg",
   "pdfExportImageQuality": 90,
   "citeFormats": [],
-  "exportFormats": [],
+  "exportFormats": [
+    {
+      "name": "freddie-import literature",
+      "outputPathTemplate": "1-Literature/{{title}}.md",
+      "imageOutputPathTemplate": "z-attachments/Picture/",
+      "imageBaseNameTemplate": "image"
+    }
+  ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": true,
   "whichNotesToOpenAfterImport": "all-imported-notes"
