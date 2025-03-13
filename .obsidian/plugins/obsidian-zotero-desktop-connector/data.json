@@ -1,6 +1,6 @@
 {
   "database": "Zotero",
-  "noteImportFolder": "Literature/",
+  "noteImportFolder": "Literature Notes/",
   "pdfExportImageDPI": 120,
   "pdfExportImageFormat": "jpg",
   "pdfExportImageQuality": 90,
@@ -14,9 +14,10 @@
   "exportFormats": [
     {
       "name": "freddie-import literature",
-      "outputPathTemplate": "1-Literature/{{title}}.md",
-      "imageOutputPathTemplate": "z-attachments/Pictures/",
-      "imageBaseNameTemplate": "image"
+      "outputPathTemplate": "Literature Notes/{{title}}.md",
+      "imageOutputPathTemplate": "Literature Notes/attachments/",
+      "imageBaseNameTemplate": "image",
+      "cslStyle": "ieee"
     }
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
