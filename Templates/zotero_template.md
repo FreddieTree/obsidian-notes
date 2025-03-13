@@ -23,7 +23,7 @@ tags: {{tags}}
 
 ## ✏️ Annotations
 {% for annotation in annotations %}
-> **📄 Page {{annotation.page}}**
+> **📄 Page {% if annotation.page %}{{annotation.page}}{% else %}Unknown{% endif %}**
 > - {{annotation.annotatedText}}
 > {% if annotation.comment %}💬 _{{annotation.comment}}_{% endif %}
 {% endfor %}
