@@ -15,7 +15,7 @@
     {
       "name": "freddie-import literature",
       "outputPathTemplate": "LiteratureNotes/{{citekey}} - {{title}}.md",
-      "imageOutputPathTemplate": "Literature Notes/attachments/",
+      "imageOutputPathTemplate": "LiteratureNotes/attachments/",
       "imageBaseNameTemplate": "image",
       "cslStyle": "ieee",
       "templatePath": "Templates/zotero_template.md"
