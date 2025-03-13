@@ -1,0 +1,1 @@
+---date: {% if date %}{<!-- -->{date | format("YYYY-MM")}}{% endif %}期刊: {% if journalAbbreviation %}{<!-- -->{journalAbbreviation}}{% endif %}languages: {<!-- -->{language}}authors: {% for t in creators %}{<!-- -->{t.firstName}}{<!-- -->{t.lastName}}{<!-- -->{t.name}}{% if not loop.last %}, {% endif %}{% endfor %}分区:---

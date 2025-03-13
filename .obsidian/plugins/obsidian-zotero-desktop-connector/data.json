@@ -9,7 +9,7 @@
     {
       "name": "freddie-import literature",
       "outputPathTemplate": "1-Literature/{{title}}.md",
-      "imageOutputPathTemplate": "z-attachments/Picture/",
+      "imageOutputPathTemplate": "z-attachments/Pictures/",
       "imageBaseNameTemplate": "image"
     }
   ],
