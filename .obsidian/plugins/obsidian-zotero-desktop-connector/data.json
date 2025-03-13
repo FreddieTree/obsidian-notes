@@ -14,7 +14,7 @@
   "exportFormats": [
     {
       "name": "freddie-import literature",
-      "outputPathTemplate": "Literature Notes/{{citekey}} - {{title}}.md",
+      "outputPathTemplate": "LiteratureNotes/{{citekey}} - {{title}}.md",
       "imageOutputPathTemplate": "Literature Notes/attachments/",
       "imageBaseNameTemplate": "image",
       "cslStyle": "ieee",
