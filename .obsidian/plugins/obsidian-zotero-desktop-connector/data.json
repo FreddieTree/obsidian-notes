@@ -4,7 +4,13 @@
   "pdfExportImageDPI": 120,
   "pdfExportImageFormat": "jpg",
   "pdfExportImageQuality": 90,
-  "citeFormats": [],
+  "citeFormats": [
+    {
+      "name": "Format #1",
+      "format": "formatted-bibliography",
+      "cslStyle": "IEEE"
+    }
+  ],
   "exportFormats": [
     {
       "name": "freddie-import literature",
@@ -15,5 +21,6 @@
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": true,
-  "whichNotesToOpenAfterImport": "all-imported-notes"
+  "whichNotesToOpenAfterImport": "all-imported-notes",
+  "shouldConcat": true
 }
