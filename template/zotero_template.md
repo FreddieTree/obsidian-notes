@@ -10,6 +10,6 @@
 
   ## 注释
   {% for annotation in annotations %}
-  - **页面 {{annotation.page}}**: {{annotation.annotatedText}}
+  - **页面 [{{annotation.page}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}})**: =={{annotation.annotatedText}}==
     - 评论: {{annotation.comment}}
   {% endfor %}

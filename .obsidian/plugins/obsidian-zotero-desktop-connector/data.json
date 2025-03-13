@@ -18,7 +18,7 @@
       "imageOutputPathTemplate": "Literature Notes/attachments/",
       "imageBaseNameTemplate": "image",
       "cslStyle": "ieee",
-      "templatePath": "zotero_template.md"
+      "templatePath": "template/zotero_template.md"
     }
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
