@@ -13,7 +13,7 @@
   ],
   "exportFormats": [
     {
-      "name": "freddie-import literature",
+      "name": "import literature#1",
       "outputPathTemplate": "Literature Notes/{{citekey}} - {{title}}.md",
       "imageOutputPathTemplate": "Literature Notes/attachments/",
       "imageBaseNameTemplate": "image",
