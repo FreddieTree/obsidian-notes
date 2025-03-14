@@ -36,4 +36,6 @@
 ---
 
 ## 📚 References
-`{{bibliography}}`
+```dataview
+table authors, year, DOI
+from "path_to_your_papers"
