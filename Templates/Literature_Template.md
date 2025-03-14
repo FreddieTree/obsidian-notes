@@ -1,37 +1,47 @@
-# 📖 `{{title}}`
+# {{title}}
+
+<!-- Collapsible Basic Information -->
+<details>
+  <summary>📌 Basic Information</summary>
+  
+  - **Authors:** {% for author in creators %}{{author.firstName}} {{author.lastName}}{% if not loop.last %}, {% endif %}{% endfor %}
+  - **Publication Date:** {{date | format("YYYY-MM-DD")}}
+  {% if DOI %}
+  - **DOI:** [{{DOI}}](https://doi.org/{{DOI}})
+  {% endif %}
+  - **Tags:** {{tags}}
+  
+</details>
+
+---
 
 ## 📝 Summary
-> `{{abstractNote | truncate(500, "...")}}`
+> {{abstractNote | truncate(500, "...")}}
 
 ---
 
 ## ✏️ Annotations
 {% for annotation in annotations %}
-> [!quote] **📄 Page {{annotation.page}}**  
-> **🖍 Highlight:** {{annotation.annotatedText}}  
+> [!quote] **Page {{annotation.page}}**
+> **Highlight:** {{annotation.annotatedText}}
 > {% if annotation.comment %}💬 _{{annotation.comment}}_{% endif %}
-> ⏳ _Created on: {{annotation.date | format("YYYY-MM-DD HH:mm")}}_
 {% endfor %}
 
 ---
 
 ## 🧐 Personal Notes
-### 🔍 **Key Takeaways**
-- _你的见解和反思_
 
-### 📌 **Important Concepts**
-- _概念 A_
-- _概念 B_
+### 🔍 Key Takeaways  
+- *Write your insights and reflections here.*
 
-### ❓ **Questions for Further Research**
-- _需要进一步探索的问题_
+### 📌 Important Concepts  
+- *Concept 1*  
+- *Concept 2*
+
+### ❓ Questions for Further Research  
+- *List questions or points you need to explore further.*
 
 ---
 
 ## 📚 References
-```dataview
-table title, authors, year, DOI
-from "Literature Notes"
-where contains(tags, "AI") or contains(tags, "NLP")
-sort year desc
-```
+{{bibliography}}
