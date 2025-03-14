@@ -19,9 +19,6 @@
 
  :feature/parse-yaml? false
  
- :ignored-page-references-keywords #{:title :tags :date :authors :doi}
-
- 
  ;; Define the default journal page template.
  ;; Enter the template name between the quotes.
  :default-templates
@@ -304,7 +301,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites []
+ :favorites ["authors"]
 
  ;; Set flashcards interval.
  ;; Expected value:
