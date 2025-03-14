@@ -1,31 +1,31 @@
 ---
-title: '{{title}}'
-authors: '{% for author in creators %}''{{author.firstName}} {{author.lastName}}{% if not loop.last %}, {% endif %}{% endfor %}
-date: {{date | format("YYYY-MM-DD")}}
-tags: {{tags}}
-{% if DOI %}DOI: [{{DOI}}](https://doi.org/{{DOI}}){% endif %}
+title: `{{title}}`
+authors: {% for author in creators %}`{{author.firstName}} {{author.lastName}}`{% if not loop.last %}, {% endif %}{% endfor %}
+date: `{{date | format("YYYY-MM-DD")}}`
+tags: `{{tags}}`
+{% if DOI %}DOI: [`{{DOI}}`](https://doi.org/{{DOI}}){% endif %}
 ---
 
-# 📖 {{title}}
+# 📖 `{{title}}`
 
 ### 📌 Basic Information
-- **Authors**: {% for author in creators %}{{author.firstName}} {{author.lastName}}{% if not loop.last %}, {% endif %}{% endfor %}
-- **Publication Date**: {{date | format("YYYY-MM-DD")}}
-{% if DOI %}- **DOI**: [{{DOI}}](https://doi.org/{{DOI}}){% endif %}
-- **Tags**: {{tags}}
+- **Authors**: {% for author in creators %}`{{author.firstName}} {{author.lastName}}`{% if not loop.last %}, {% endif %}{% endfor %}
+- **Publication Date**: `{{date | format("YYYY-MM-DD")}}`
+{% if DOI %}- **DOI**: [`{{DOI}}`](https://doi.org/{{DOI}}){% endif %}
+- **Tags**: `{{tags}}`
 
 ---
 
 ## 📝 Summary
-> {{abstractNote}}
+> `{{abstractNote}}`
 
 ---
 
 ## ✏️ Annotations
 {% for annotation in annotations %}
-> **📄 Page {{annotation.page}}**
-> - {{annotation.annotatedText}}
-> {% if annotation.comment %}💬 _{{annotation.comment}}_{% endif %}
+> **📄 Page `{{annotation.page}}`**
+> - `{{annotation.annotatedText}}`
+> {% if annotation.comment %}💬 _`{{annotation.comment}}`_{% endif %}
 {% endfor %}
 
 ---
@@ -44,4 +44,4 @@ tags: {{tags}}
 ---
 
 ## 📚 References
-{{bibliography}}
+`{{bibliography}}`
