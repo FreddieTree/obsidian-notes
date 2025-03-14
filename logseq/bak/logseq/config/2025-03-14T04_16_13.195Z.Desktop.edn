@@ -10,15 +10,13 @@
  ;; Available options:
  ;; - :now for NOW/LATER style (default)
  ;; - :todo for TODO/DOING style
- :preferred-workflow :todo
+ :preferred-workflow :now
 
  ;; Exclude directories/files.
  ;; Example usage:
  ;; :hidden ["/archived" "/test.md" "../assets/archived"]
  :hidden []
 
- :feature/parse-yaml? false
- 
  ;; Define the default journal page template.
  ;; Enter the template name between the quotes.
  :default-templates
@@ -421,8 +419,4 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :ui/show-brackets? false
- :graph/settings {:excluded-pages? false
- :builtin-pages? true
- :journal? true
- :orphan-pages? false}}
+ :ui/show-brackets? false}
