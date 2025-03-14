@@ -9,15 +9,15 @@
 ---
 
 ## 📝 Summary
-> `{{abstractNote}}`
+> `{{abstractNote | truncate(500, "...")}}`
 
 ---
 
 ## ✏️ Annotations
 {% for annotation in annotations %}
-> **📄 Page `{{annotation.page}}`**
-> - `{{annotation.annotatedText}}`
-> {% if annotation.comment %}💬 _`{{annotation.comment}}`_{% endif %}
+> [!quote] **Page {{annotation.page}}**
+> **🖍 Highlight:** {{annotation.annotatedText}}
+> {% if annotation.comment %}💬 _{{annotation.comment}}_{% endif %}
 {% endfor %}
 
 ---
