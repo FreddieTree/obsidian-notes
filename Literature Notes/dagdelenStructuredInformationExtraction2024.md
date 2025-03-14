@@ -1,12 +1,4 @@
-≤# 📖 `Structured information extraction from scientific text with large language models`
-
-### 📌 Basic Information
-- **Authors**: `John Dagdelen`, `Alexander Dunn`, `Sanghoon Lee`, `Nicholas Walker`, `Andrew S. Rosen`, `Gerbrand Ceder`, `Kristin A. Persson`, `Anubhav Jain`
-- **Publication Date**: `2024-02-15`
-- **DOI**: [`10.1038/s41467-024-45563-x`](https://doi.org/10.1038/s41467-024-45563-x)
-- **Tags**: ``
-
----
+# 📖 `Structured information extraction from scientific text with large language models`
 
 ## 📝 Summary
 > `Abstract
@@ -20,15 +12,15 @@
 ---
 
 ## 🧐 Personal Notes
-🔍 **Key Takeaways**  
-- _Write your insights and reflections here._
+### 🔍 **Key Takeaways**
+- _你的见解和反思_
 
-📌 **Important Concepts**  
-- _Concept 1_  
-- _Concept 2_
+### 📌 **Important Concepts**
+- _概念 A_
+- _概念 B_
 
-❓ **Questions for Further Research**  
-- _List questions or points you need to explore further._
+### ❓ **Questions for Further Research**
+- _需要进一步探索的问题_
 
 ---
 
@@ -36,7 +28,6 @@
 ```dataview
 table title, authors, year, DOI
 from "Literature Notes"
+where contains(tags, "AI") or contains(tags, "NLP")
 sort year desc
 ```
-
-

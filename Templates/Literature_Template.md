@@ -34,3 +34,4 @@ table title, authors, year, DOI
 from "Literature Notes"
 where contains(tags, "AI") or contains(tags, "NLP")
 sort year desc
+```
