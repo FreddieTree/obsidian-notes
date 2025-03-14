@@ -37,6 +37,7 @@
 table authors, year, DOI
 from "path_to_your_papers"
 
+
 ```dataview
 LIST
-FROM "Literature Notes"
+
