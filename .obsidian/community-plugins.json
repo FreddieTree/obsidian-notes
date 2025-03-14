@@ -3,5 +3,9 @@
   "obsidian-zotero-desktop-connector",
   "templater-obsidian",
   "dataview",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "awesome-image",
+  "highlightr-plugin",
+  "obsidian-list-callouts",
+  "obsidian-linter"
 ]
