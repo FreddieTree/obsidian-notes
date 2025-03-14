@@ -4,4 +4,3 @@ LIST
 FROM "Literature Notes
 ```
 
-
