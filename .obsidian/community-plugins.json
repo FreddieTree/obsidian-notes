@@ -2,7 +2,6 @@
   "obsidian-git",
   "obsidian-zotero-desktop-connector",
   "templater-obsidian",
-  "dataview",
   "obsidian-kanban",
   "awesome-image",
   "highlightr-plugin",
@@ -10,5 +9,7 @@
   "obsidian-linter",
   "obsidian-enhancing-mindmap",
   "smart-connections-visualizer",
-  "smart-connections"
+  "smart-connections",
+  "dataview",
+  "drawio-obsidian"
 ]
