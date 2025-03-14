@@ -421,6 +421,6 @@
  :file/name-format :triple-lowbar
  :ui/show-brackets? false
  :graph/settings {:excluded-pages? false
- :builtin-pages? true
+ :builtin-pages? false
  :journal? true
  :orphan-pages? false}}
