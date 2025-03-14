@@ -33,8 +33,9 @@
 ---
 
 ## 📚 References
-```dataview
-table authors, year, DOI
-from "path_to_your_papers"
+```datavew
 ```
+table title, authors, year, DOI
+from "Literature Notes"
+sort year desc
 
