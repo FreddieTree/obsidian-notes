@@ -422,5 +422,5 @@
  :ui/show-brackets? false
  :graph/settings {:excluded-pages? false
  :builtin-pages? false
- :journal? true
+ :journal? false
  :orphan-pages? false}}
