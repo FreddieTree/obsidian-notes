@@ -14,7 +14,7 @@
   "exportFormats": [
     {
       "name": "Import Literature#1",
-      "outputPathTemplate": "Literature Notes/{{citekey}} - {{title}}.md",
+      "outputPathTemplate": "Literature Notes/{{citekey}} ({{year}}).md",
       "imageOutputPathTemplate": "Literature Notes/attachments/",
       "imageBaseNameTemplate": "image",
       "cslStyle": "ieee",
