@@ -1,4 +1,4 @@
-# 📖 `Structured information extraction from scientific text with large language models`
+≤# 📖 `Structured information extraction from scientific text with large language models`
 
 ### 📌 Basic Information
 - **Authors**: `John Dagdelen`, `Alexander Dunn`, `Sanghoon Lee`, `Nicholas Walker`, `Andrew S. Rosen`, `Gerbrand Ceder`, `Kristin A. Persson`, `Anubhav Jain`
