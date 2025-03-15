@@ -19,3 +19,4 @@ git clone git@hf.co:FreddieTree/<model-name>
 cd <model-name>
 ```
 
+Files to be added larger than 10mb should r
