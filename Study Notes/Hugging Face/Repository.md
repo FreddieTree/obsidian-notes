@@ -3,7 +3,7 @@ To create a new file, you can choose a name for your file, add content, and save
 And select *Open as a pull request* to create a [[Pull Request]], instead of addming your changes directly to hte main branch of the repo.
 
 ## Terminal adding files to a repo
-Load the repo and navigate to it:
+**Load the repo and navigate to it**:
 ```
 git clone https://huggingface.co/FreddieTree/<model-name>
 cd <model-name>
@@ -15,6 +15,6 @@ cd dataset-name>
 ```
 over SSH:
 ```
-git clone git@hf.co:<your-username>/<your-model-name>
-cd <your-model-name>
+git clone git@hf.co:FreddieTree/<model-name>
+cd <model-name>
 ```
