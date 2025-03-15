@@ -13,4 +13,8 @@ for the dataset repo:
 git clone https://huggingface.co/datasets/FreddieTree/<dataset-name>
 cd dataset-name>
 ```
-over SSH
+over SSH:
+```
+git clone git@hf.co:<your-username>/<your-model-name>
+cd <your-model-name>
+```
