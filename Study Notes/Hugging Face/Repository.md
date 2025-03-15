@@ -18,3 +18,4 @@ over SSH:
 git clone git@hf.co:FreddieTree/<model-name>
 cd <model-name>
 ```
+
