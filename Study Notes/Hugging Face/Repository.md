@@ -21,4 +21,12 @@ cd <model-name>
 
 Files to be added larger than 10mb should run `git lif install`
 and larger than 5GB should run ` huggingface-cli lfs-enable-largefiles .` 
-`git lfs track "*.your_extension"` to add new extensions if the file types are not already handled as 
+`git lfs track "*.your_extension"` to add new extensions if the file types are not already handled as `git-lfs` uses to efficiently track changes to your large files.
+
+## Push files
+```
+# Create any files you like! Then...
+git add .
+git commit -m "First model version"  # You can choose any descriptive message
+git push
+```
