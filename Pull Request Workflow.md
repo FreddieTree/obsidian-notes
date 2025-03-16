@@ -4,8 +4,6 @@ tags:
   - Terminal
   - HuggingFace
 ---
-
-
 ## **1. Creating a Pull Request**
 
 - **Step 1: Create or Modify Files**  
