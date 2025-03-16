@@ -18,7 +18,7 @@
       "imageOutputPathTemplate": "Literature Notes/attachments/",
       "imageBaseNameTemplate": "image",
       "cslStyle": "ieee",
-      "templatePath": "Templates/Literature_Template.md"
+      "templatePath": "Templates/Study Template.md"
     }
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",

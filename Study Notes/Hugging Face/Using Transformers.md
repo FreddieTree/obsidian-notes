@@ -125,31 +125,27 @@ More layers/heads generally improve model capacity but increase computation.
 > [!quote] **Page **
 > **Highlight:** The goal is to find the most meaningful representation — that is, the one that makes the most sense to the model — and, if possible, the smallest representation.
 
-> 💬 _“Smallest representation” means representing the input text with the <b>fewest tokens possible</b>. Fewer tokens reduce model input length and computational cost. For example, “tokenization” split into “token” + “ization” is smaller and more efficient than splitting it into characters._
+> 💬 _“Smallest representation” means representing the input text with the <b>fewest tokens possible</b>. Fewer tokens reduce model input length and computational cost. For example, “tokenization” split into “token” + “ization” is smaller and more efficient than splitting it into characters.
+> 
+> 
+> <b>Hidden layers</b> = depth of the Transformer, <b>attention heads</b> = number of attention heads per layer. 
+More layers/heads generally improve model capacity but increase computation.
+
+> [!quote] **Page **
+> **Highlight:** Creating a model from the default configuration initializes it with random values:
+
+> 💬 _The model initializes randomly because it has not been trained yet. You must either <b>train it from scratch</b> or <b>load pretrained weights</b>; otherwise, it will output meaningless results._
 
 > [!quote] **Page **
 > **Highlight:** Word-based
 
 > 💬 _<b>Tokenizer 类型</b> <b>原理</b> <b>优点</b> <b>缺点</b> <b>Word-based</b> 以空格或规则划分成单词简单直观，词义完整词表巨大，OOV（未知词）多 <b>Character-based</b> 每个字符为一个 token 词表小，几乎无 OOV 序列长，单个字符语义少 <b>Subword</b> 高频词不拆，低频词拆成有意义的子词，如 “token”+“ization” 兼顾 OOV 和词表大小，效率高，语义保持较好构建和训练更复杂
 
-> [!quote] **Page **
-  **Highlight:** This is known as the “unknown” token, often represented as ”[UNK]” or ”<unk>”. It’s generally a bad sign if you see that the tokenizer is producing a lot of these tokens, as it wasn’t able to retrieve a sensible representation of a word and you’re losing information along the way.
-
-> [!quote] **Page **
-**Highlight:** Character-based
-
-
-> [!quote] **Page **
-> **Highlight:** Subword tokenization
-> 
-
-> [!quote] **Page **
-> **Highlight:** And more!
-
 
 > [!quote] **Page **
 > **Highlight:** from transformers import BertTokenizer tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-> 💬 _<b>AutoTokenizer</b> works the same but is more flexible. It automatically selects the correct tokenizer class (e.g., BertTokenizer) based on the checkpoint._
+
+> 💬 _<b>AutoTokenizer</b> works the same but is more flexible. It automatically selects the correct tokenizer class (e.g., BertTokenizer) based on the checkpoint.
 
 > [!quote] **Page **
 > **Highlight:** Translating text to numbers is known as encoding. Encoding is done in a two-step process: the tokenization, followed by the conversion to input IDs.
@@ -160,3 +156,63 @@ More layers/heads generally improve model capacity but increase computation.
 
 # Handling multiple sequences
 
+<b>Hidden layers</b> = depth of the Transformer, <b>attention heads</b> = number of attention heads per layer. 
+More layers/heads generally improve model capacity but increase computation.
+
+> [!quote] **Page **
+> **Highlight:** Creating a model from the default configuration initializes it with random values:
+
+> 💬 _The model initializes randomly because it has not been trained yet. You must either <b>train it from scratch</b> or <b>load pretrained weights</b>; otherwise, it will output meaningless results.
+
+
+> [!quote] **Page **
+> **Highlight:** Transformers models expect multiple sentences by default.
+
+> 💬 _“Multiple sentences” means the model expects inputs as batches (even if batch size = 1). Transformers expect a 2D tensor: [batch_size, seq_length]. A single sentence without batching would be 1D [seq_length], which breaks the model input convention.
+Batching is key to efficient computation, enabling parallel processing._
+
+> [!quote] **Page **
+> **Highlight:** we usually pad the inputs.
+> 
+
+> [!quote] **Page **
+> **Highlight:** Attention masks are tensors with the exact same shape as the input IDs tensor, filled with 0s and 1s: 1s indicate the corresponding tokens should be attended to, and 0s indicate the corresponding tokens should not be attended to (i.e., they should be ignored by the attention layers of the model).
+> 
+
+> [!quote] **Page **
+> **Highlight:** Truncate your sequences.
+
+* Quantity Limit: 
+Theoretically, <b>batch_size</b> depends on GPU memory/RAM, but the model itself does not limit batch_size. 
+* <b>Length Limit</b>: 
+Most models (such as BERT) have a maximum length limit for a single sentence, usually 512 tokens. If the length exceeds this, the tokenizer will automatically truncate.
+
+* How to avoid: 
+ <b>Sliding window</b> (sliding window) technology can be used to input long texts in chunks to the model. 
+ <b>Models</b> that support long sequences such as Longformer, BigBird can also be used. 
+
+* The impact of truncation: 
+ Truncation may result in the loss of key information, especially in NLP tasks where important information in long sentences is often at the end. 
+ A more reasonable approach is to process segments and aggregate contextual information rather than directly truncate.
+
+# Putting it all together
+
+> [!quote] **Page **
+> **Highlight:** 
+> ```python
+model_inputs = tokenizer(sequence) print(model_inputs["input_ids"]) tokens = tokenizer.tokenize(sequence) ids = tokenizer.convert_tokens_to_ids(tokens) print(ids)
+
+> 💬 _Two methods can be used, but the difference lies in the degree of automation:
+
+1. The tokenizer(sequence) is a complete pipeline that automatically completes tokenization, ID conversion, padding, truncation, and special tokens (such as [CLS], [SEP]). 
+2. The tokenizer.tokenize() will only tokenize and will not add special tokens. 
+3. convert_tokens_to_ids() manually converts the tokenization results to IDs, but still will not add special tokens. 
+
+Recommendation: Generally, it is more convenient to directly use tokenizer(sequence)._
+
+> [!quote] **Page **
+> **Highlight:** 
+> ```
+return_tensors = "pt"
+
+> 💬 _return_tensors='pt' tells the tokenizer to output <b>PyTorch tensors</b> for model input. For TensorFlow users, you would set 'tf'._
