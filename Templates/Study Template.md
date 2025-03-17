@@ -17,11 +17,10 @@
 
 ## 🖍️ Annotation Review
 {% for annotation in annotations %}
-> [!quote] **Location:** {{annotation.page | default("N/A")}}  
-> **Highlight:** {{annotation.annotatedText}}  
+> [!quote] 📌 **Captured Insight**
+> ✨ **Excerpt:** {{annotation.annotatedText}}  
 
-{% if annotation.comment %}💬 _Note:_ {{annotation.comment}}{% endif %}
+> {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
 {% endfor %}
-
 ---
 
