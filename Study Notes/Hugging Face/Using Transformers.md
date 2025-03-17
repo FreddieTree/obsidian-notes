@@ -1,3 +1,6 @@
+---
+
+---
 
 # Introduction
 > **Highlight:** Simplicity: Hardly any abstractions are made across the library. The “All in one file” is a core concept: a model’s forward pass is entirely defined in a single file, so that the code itself is understandable and hackable.
@@ -14,7 +17,7 @@
 
 > [!quote] **Page **
 > **Highlight:** Mapping each token to an integer
-> 💬 _Mapping to integers is efficient because they act as indices to lookup embeddings in the model’s matrix. Using floats would complicate indexing and increase memory and computation costs. The model just needs to know “this is token #N.”_
+> 💬 _Mapping to integers is efficient because they act as indices to lookup embeddings in the model’s matrix. Using floats would complicate indexing and increase memory and computation costs. The model just needs to know “this is token N.”_
 
 > [!quote] **Page **
 > **Highlight:** All this preprocessing needs to be done in exactly the same way as when the model was pretrained
@@ -63,7 +66,8 @@
 > [!quote] **Page **
 > **Highlight:** In this diagram, the model is represented by its embeddings layer and the subsequent layers. The embeddings layer converts each input ID in the tokenized input into a vector that represents the associated token. The subsequent layers manipulate those vectors using the attention mechanism to produce the final representation of the sentences.
 
- ![[transformer_and_head.svg]]
+![[full_nlp_pipeline.svg]]
+
 
 > [!quote] **Page **
 > **Highlight:** To be converted to probabilities, they need to go through a SoftMax layer (all 🤗 Transformers models output the logits, as the loss function for training will generally fuse the last activation function, such as SoftMax, with the actual loss function, such as cross entropy)
