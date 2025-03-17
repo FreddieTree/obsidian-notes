@@ -1,11 +1,3 @@
----
-title: {{reference.title}}
-authors: {{reference.authors}}
-year: {{reference.year}}
-tags: [zotero, {{reference.type}}, {{reference.year}}]
-citation_key: {{reference.citationKey}}
----
-
 # {{reference.title}}
 
 ## Metadata
@@ -15,52 +7,47 @@ citation_key: {{reference.citationKey}}
 
 ---
 
-{% set yellow = annotations | filter(attribute='color', value='yellow') %}
-{% if yellow %}
 ## 🟡 Key Points
-{% for annotation in yellow %}
+{% for annotation in annotations %}
+{% if annotation.color == "yellow" %}
 > [!quote]- 📌 **Key Point**
 > ✨ **Excerpt:** {{annotation.annotatedText}}  
 > {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
-{% endfor %}
 {% endif %}
+{% endfor %}
 
-{% set red = annotations | filter(attribute='color', value='red') %}
-{% if red %}
 ## 🔴 Questions & Critiques
-{% for annotation in red %}
+{% for annotation in annotations %}
+{% if annotation.color == "red" %}
 > [!quote]- ❓ **Question or Critique**
 > ✨ **Excerpt:** {{annotation.annotatedText}}  
 > {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
-{% endfor %}
 {% endif %}
+{% endfor %}
 
-{% set blue = annotations | filter(attribute='color', value='blue') %}
-{% if blue %}
 ## 🔵 Definitions / APIs
-{% for annotation in blue %}
+{% for annotation in annotations %}
+{% if annotation.color == "blue" %}
 > [!quote]- 🧩 **Definition / API**
 > ✨ **Excerpt:** {{annotation.annotatedText}}  
 > {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
-{% endfor %}
 {% endif %}
+{% endfor %}
 
-{% set green = annotations | filter(attribute='color', value='green') %}
-{% if green %}
 ## 🟢 How-To / Code Snippets
-{% for annotation in green %}
+{% for annotation in annotations %}
+{% if annotation.color == "green" %}
 > [!quote]- 💻 **How-To / Code**
 > ✨ **Excerpt:** {{annotation.annotatedText}}  
 > {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
-{% endfor %}
 {% endif %}
+{% endfor %}
 
-{% set purple = annotations | filter(attribute='color', value='purple') %}
-{% if purple %}
 ## 🟣 Ideas / Applications
-{% for annotation in purple %}
+{% for annotation in annotations %}
+{% if annotation.color == "purple" %}
 > [!quote]- 💡 **Idea / Application**
 > ✨ **Excerpt:** {{annotation.annotatedText}}  
 > {% if annotation.comment %}🗒️ **Note:** {{annotation.comment}}{% endif %}
-{% endfor %}
 {% endif %}
+{% endfor %}
