@@ -1,7 +1,7 @@
 1. Tasks for the next two weeks
 	* Focus on learning Hugging Face and HPC using the materials provided earlier.
 	* Prepare thoroughly for the upcoming meeting on April 2nd with all four supervisors.
-	
+
 2. Clarification on supervisory roles
 	Regular meetings:
 	* Yi and Tom – Biweekly meetings (twice a month).
